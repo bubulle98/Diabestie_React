@@ -1,0 +1,17 @@
+body {
+	height: 100vh;
+	width: 100%;
+	background-color: #ced9ec;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: #3e4356;
+	margin: 0;
+}
+
+#root {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}

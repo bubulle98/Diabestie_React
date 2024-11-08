@@ -1,0 +1,71 @@
+ul {
+	list-style: none;
+}
+
+.navBar {
+	background-color: #fdfdfd;
+	display: flex;
+	flex-direction: column;
+	margin: 2%;
+	align-items: center;
+	border-radius: 10px;
+	font-size: 1.2rem;
+
+	li:hover {
+		color: #fdfdfd;
+		background-color: #f16b84;
+	}
+
+	.navTitle {
+		display: flex;
+		font-size: 1.6rem;
+		font-weight: 400;
+		align-items: center;
+		margin: 2.5rem;
+		margin-right: 3.5rem;
+
+		.logoIcon {
+			height: 1.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+
+	.linksList {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+
+		img {
+			height: 1rem;
+			margin-right: 1.2rem;
+		}
+
+		li {
+			padding: 1rem;
+			width: 100%;
+			border-radius: 10px;
+		}
+	}
+
+	.account {
+		width: 100%;
+		margin-top: auto;
+		margin-bottom: 0;
+		display: flex;
+		border-top: solid 1px #e2e2e2;
+		justify-content: center;
+		align-items: center;
+		padding: 1.5rem;
+		font-size: 1rem;
+
+		.logOutIcon {
+			height: 1.2rem;
+			stroke: #3e4356;
+			margin-left: 1rem;
+		}
+
+		.userIcon {
+			margin-right: 0.9rem;
+		}
+	}
+}
