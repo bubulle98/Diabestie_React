@@ -3,7 +3,7 @@ ul {
 }
 
 .navBar {
-	background-color: #fdfdfd;
+	background-color: var(--boxes);
 	display: flex;
 	flex-direction: column;
 	margin: 2%;
@@ -12,8 +12,8 @@ ul {
 	font-size: 1.2rem;
 
 	li:hover {
-		color: #fdfdfd;
-		background-color: #f16b84;
+		/* color: var(--boxes); */
+		background-color: var(--navbarItemHover);
 	}
 
 	.navTitle {
@@ -26,7 +26,7 @@ ul {
 
 		.logoIcon {
 			height: 1.5rem;
-			margin-right: 0.5rem;
+			margin-right: 0.7rem;
 		}
 	}
 
@@ -34,6 +34,7 @@ ul {
 		padding: 0;
 		display: flex;
 		flex-direction: column;
+		gap: 0.5rem;
 
 		img {
 			height: 1rem;
@@ -41,9 +42,14 @@ ul {
 		}
 
 		li {
-			padding: 1rem;
+			padding: 1.2rem 1.5rem;
 			width: 100%;
-			border-radius: 10px;
+			border-radius: 28px;
+
+			&.active {
+				color: var(--boxes);
+				background-color: var(--navbarItem);
+			}
 		}
 	}
 
@@ -52,7 +58,7 @@ ul {
 		margin-top: auto;
 		margin-bottom: 0;
 		display: flex;
-		border-top: solid 1px #e2e2e2;
+		border-top: solid 1px var(--boxesStroke);
 		justify-content: center;
 		align-items: center;
 		padding: 1.5rem;
@@ -60,7 +66,6 @@ ul {
 
 		.logOutIcon {
 			height: 1.2rem;
-			stroke: #3e4356;
 			margin-left: 1rem;
 		}
 

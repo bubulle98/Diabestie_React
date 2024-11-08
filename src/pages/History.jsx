@@ -1,7 +1,9 @@
+import NavBar from "../components/NavBar/NavBar";
+
 const History = () => {
 	return (
 		<>
-			<p>History</p>
+			<NavBar firstName="Amandine" lastName="Ameye" page="history" />
 		</>
 	);
 };

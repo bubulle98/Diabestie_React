@@ -5,10 +5,15 @@ import dashboard from "../../assets/dashboard.png";
 import add from "../../assets/add.png";
 import history from "../../assets/history.png";
 import graphs from "../../assets/chart.png";
-import user from "../../assets/user.png";
+import defaultUserImg from "../../assets/user.png";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ firstName, lastName }) => {
+const NavBar = ({
+	firstName,
+	lastName,
+	profileImage = defaultUserImg,
+	page,
+}) => {
 	return (
 		<div className={style.navBar}>
 			<p className={style.navTitle}>
@@ -16,20 +21,26 @@ const NavBar = ({ firstName, lastName }) => {
 				Diabestie
 			</p>
 			<ul className={style.linksList}>
-				<li>
+				<li className={page === "dashboard" ? style.active : undefined}>
 					<Link to="/">
 						<img src={dashboard} alt="dashboard" />
 						Dashboard
 					</Link>
 				</li>
-				<li>
-					<Link to="addMeal/step1">
+				<li
+					className={
+						page === "addMeal1" || page === "addMeal2"
+							? style.active
+							: undefined
+					}
+				>
+					<Link to="/addMeal/step1">
 						<img src={add} alt="add meal" />
 						New meal
 					</Link>
 				</li>
-				<li>
-					<Link to="history">
+				<li className={page === "history" ? style.active : undefined}>
+					<Link to="/history">
 						<img src={history} alt="meals history" />
 						Meals history
 					</Link>
@@ -42,7 +53,7 @@ const NavBar = ({ firstName, lastName }) => {
 				</li>
 			</ul>
 			<p className={style.account}>
-				<img src={user} alt="user picture" className={style.userIcon} />
+				<img src={profileImage} alt="user picture" className={style.userIcon} />
 				{firstName} {lastName}{" "}
 				<img src={logOutIcon} alt="log out" className={style.logOutIcon} />
 			</p>

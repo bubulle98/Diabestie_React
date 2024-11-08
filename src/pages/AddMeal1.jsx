@@ -1,7 +1,9 @@
+import NavBar from "../components/NavBar/NavBar";
+
 const AddMeal1 = () => {
 	return (
 		<>
-			<p>Add Meal 1</p>
+			<NavBar firstName="Amandine" lastName="Ameye" page="addMeal1" />
 		</>
 	);
 };
